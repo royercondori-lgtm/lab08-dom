@@ -1,0 +1,46 @@
+# Bitacora de JavaScript interactivo
+ 
+Laboratorio 08: JavaScript Interactivo - DOM, Eventos y Objetos.
+Navegador usado: (escribe aqui cual usaste)
+ 
+## Ejercicio 2: Seleccionar y modificar el DOM
+
+| Instruccion | Que cambio en la pantalla | Se mantiene al recargar (Si/No) |
+|-------------|---------------------------|---------------------------------|
+| textContent desde la consola | Cambió el título a "Hola desde la consola" | No |
+| textContent desde app.js | Cambió el título a "Hola TECSUP" | Sí |
+| style.color | Cambió el color del título a azul | Sí |
+| classList.add | Agregó fondo amarillo al párrafo | Sí |
+| createElement + appendChild | Agregó "JavaScript" a la lista | Sí |
+ 
+## Ejercicio 3: Evento click
+
+| Tipo de evento | Que accion lo dispara | Cuanto suma por accion |
+|----------------|-----------------------|------------------------|
+| click | Hacer un clic sobre el botón | Suma 1 punto por cada clic |
+| dblclick | Hacer doble clic rápido sobre el botón | Suma 1 punto por cada doble clic |
+| mouseover | Pasar el cursor por encima del botón | Suma 1 punto cada vez que el mouse entra al botón |
+
+ 
+## Ejercicio 4: Eventos input y submit
+
+| Prueba | Que paso en la pantalla | Se recargo la pagina (Si/No) |
+|--------|-------------------------|------------------------------|
+| Escribir en el campo nombre | El saludo cambia letra por letra en tiempo real | No |
+| Enviar sin preventDefault | El mensaje apareció un instante y el campo se limpió | Sí |
+| Enviar con preventDefault, correo sin @ | Muestra el mensaje "Correo no valido: falta @" en texto rojo | No |
+| Enviar con preventDefault, correo con @ | Muestra "Enviado: " seguido del correo ingresado | No |
+ 
+## Ejercicio 5: Clases y objetos
+
+| Objeto | nombre | precio | descripcion() | conDescuento(0.25) |
+|--------|--------|--------|---------------|--------------------|
+| laptop | Laptop | 2500 | Laptop - S/ 2500.00 | 1875 |
+| mouse | Mouse | 45 | Mouse - S/ 45.00 | 33.75 |
+| teclado | Teclado | 120 | Teclado - S/ 120.00 | 90 |
+| monitor | Monitor | 680 | Monitor - S/ 680.00 | 510 |
+
+Usar una clase permite reutilizar la misma estructura para múltiples objetos sin duplicar código.
+Además, si se necesita cambiar cómo se calcula un descuento o la descripción, solo se modifica el método en la clase y afectará a todos los productos automáticamente.
+ 
+## Ejercicio 6: DOM, eventos y objetos juntos
