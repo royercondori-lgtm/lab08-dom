@@ -1,4 +1,38 @@
-// Version 2: Con eventos e interactividad
+// Version 3: Orientada a Objetos (Clase Tarea y GestorTareas)
+class Tarea {
+  constructor(id, titulo) {
+    this.id = id;
+    this.titulo = titulo;
+    this.completada = false;
+  }
+
+  toggleCompletada() {
+    this.completada = !this.completada;
+  }
+
+  obtenerEstado() {
+    return this.completada ? "Completada" : "Pendiente";
+  }
+}
+
+class GestorTareas {
+  constructor() {
+    this.tareas = [];
+  }
+
+  agregarTarea(titulo) {
+    const nuevaTarea = new Tarea(Date.now(), titulo);
+    this.tareas.push(nuevaTarea);
+    return nuevaTarea;
+  }
+
+  eliminarTarea(id) {
+    this.tareas = this.tareas.filter((t) => t.id !== id);
+  }
+}
+
+const gestor = new GestorTareas();
+
 const formTarea = document.querySelector("#formTarea");
 const inputTarea = document.querySelector("#inputTarea");
 const listaTareas = document.querySelector("#listaTareas");
@@ -10,33 +44,42 @@ formTarea.addEventListener("submit", (e) => {
   const texto = inputTarea.value.trim();
 
   if (texto === "") {
-    mensajeError.textContent = "Por favor escribe una tarea valida.";
+    mensajeError.textContent = "Por favor, escribe una tarea valida.";
     return;
   }
   mensajeError.textContent = "";
 
+  const objetoTarea = gestor.agregarTarea(texto);
+  renderizarTarea(objetoTarea);
+
+  inputTarea.value = "";
+});
+
+function renderizarTarea(tareaObj) {
   const li = document.createElement("li");
+  li.dataset.id = tareaObj.id;
+
   const span = document.createElement("span");
-  span.textContent = texto;
+  span.textContent = tareaObj.titulo;
 
   const btnBorrar = document.createElement("button");
   btnBorrar.textContent = "Eliminar";
   btnBorrar.classList.add("btn-borrar");
 
   btnBorrar.addEventListener("click", () => {
+    gestor.eliminarTarea(tareaObj.id);
     li.remove();
   });
 
   span.addEventListener("click", () => {
+    tareaObj.toggleCompletada();
     li.classList.toggle("completada");
   });
 
   li.appendChild(span);
   li.appendChild(btnBorrar);
   listaTareas.appendChild(li);
-
-  inputTarea.value = "";
-});
+}
 
 inputBuscar.addEventListener("input", () => {
   const filtro = inputBuscar.value.toLowerCase();
