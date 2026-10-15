@@ -44,3 +44,16 @@ Usar una clase permite reutilizar la misma estructura para múltiples objetos si
 Además, si se necesita cambiar cómo se calcula un descuento o la descripción, solo se modifica el método en la clase y afectará a todos los productos automáticamente.
  
 ## Ejercicio 6: DOM, eventos y objetos juntos
+
+| Prueba | Total que muestra la pagina | Correcto (Si/No) |
+|--------|-----------------------------|------------------|
+| Cuaderno 12.50 | 12.50 | Sí |
+| + Lapicero 3.20 | 15.70 | Sí |
+| + Mochila 89.90 | 105.60 | Sí |
+| Sin Number() | Muestra error `this.precio.toFixed is not a function` | No |
+
+| Pieza | Linea de tu codigo donde aparece | Para que sirve |
+|-------|----------------------------------|----------------|
+| DOM | `listaCarrito.appendChild(li);` | Inserta dinámicamente en la lista de la página web el nuevo elemento `<li>` con la descripción del producto |
+| Evento | `formProducto.addEventListener("submit", ...)` | Captura la acción del usuario al enviar el formulario para procesar los datos sin recargar la página |
+| Objeto | `const producto = new Producto(...)` | Crea una instancia del producto con nombre y precio numérico para agregarlo al carrito y realizar los cálculos |
