@@ -1,34 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de Tareas Interactivo</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 0 10px; }
-    form { display: flex; gap: 10px; margin-bottom: 20px; }
-    input[type="text"] { flex: 1; padding: 8px; }
-    button { padding: 8px 12px; cursor: pointer; }
-    ul { list-style: none; padding: 0; }
-    li { display: flex; align-items: center; justify-content: space-between; padding: 8px; border-bottom: 1px solid #ccc; }
-    li.completada span { text-decoration: line-through; color: gray; }
-    .error { color: red; font-size: 0.9em; margin-top: -10px; margin-bottom: 10px; }
-    .btn-borrar { background-color: #ff4d4d; color: white; border: none; border-radius: 4px; padding: 4px 8px; }
-  </style>
-</head>
-<body>
-  <h1>Mi Lista de Tareas</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas Interactivo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 0 10px;
+      }
+      form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        flex: 1;
+        padding: 8px;
+      }
+      button {
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+      }
+      li.completada span {
+        text-decoration: line-through;
+        color: gray;
+      }
+      .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: -10px;
+        margin-bottom: 10px;
+      }
+      .btn-borrar {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mi Lista de Tareas</h1>
 
-  <form id="formTarea">
-    <input type="text" id="inputTarea" placeholder="Escribe una nueva tarea...">
-    <button type="submit">Agregar Tarea</button>
-  </form>
-  <div id="mensajeError" class="error"></div>
+    <form id="formTarea">
+      <input
+        type="text"
+        id="inputTarea"
+        placeholder="Escribe una nueva tarea..."
+      />
+      <button type="submit">Agregar Tarea</button>
+    </form>
+    <div id="mensajeError" class="error"></div>
 
-  <p>Buscar tarea: <input type="text" id="inputBuscar" placeholder="Filtrar tareas..."></p>
+    <p>
+      Buscar tarea:
+      <input type="text" id="inputBuscar" placeholder="Filtrar tareas..." />
+    </p>
 
-  <ul id="listaTareas"></ul>
+    <ul id="listaTareas"></ul>
 
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

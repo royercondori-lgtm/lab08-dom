@@ -1,20 +1,20 @@
 # Tarea: Mi componente interactivo
 
 ## Componente elegido
-
-Lista de tareas interactiva (Gestor de tareas) con buscador en tiempo real, marca de completado, eliminación de elementos y validación.
+Lista de tareas interactiva (Gestor de Tareas) con buscador en tiempo real, marca de completado, eliminación y validaciones.
 
 ## Version 1: solo DOM
+En esta primera versión inserté un elemento de forma dinámica usando JavaScript al cargar la página.
+- **Qué agregué:** Creación de un elemento `<li>` mediante `createElement` e inserción con `appendChild`.
+- **Por qué:** Para verificar la integración básica con el DOM.
+- **Qué cambió:** Aparece una tarea por defecto en la lista al abrir la página.
 
-En esta primera versión agregué un elemento inicial de lista dinámicamente usando JavaScript.
+## Version 2: con eventos
 
-- **Qué agregué:** Creación de un elemento `<li>` mediante `document.createElement` e inserción con `appendChild`.
-- **Por qué:** Para verificar la estructura básica de manipulación del árbol DOM.
-- **Qué cambió:** La página muestra un texto dinámico insertado directamente desde JavaScript al cargar.
+## Version 3: con clases y objetos
 
-```javascript
-const listaTareas = document.querySelector("#listaTareas");
-const liPrueba = document.createElement("li");
-liPrueba.textContent = "Tarea de prueba inicial (DOM)";
-listaTareas.appendChild(liPrueba);
-```
+## Donde uso DOM, eventos y objetos
+
+## Pruebas realizadas
+
+## Por que me diseño asi mi clase
