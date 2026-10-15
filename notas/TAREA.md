@@ -22,7 +22,6 @@ Agregué interactividad directa mediante la escucha de eventos del usuario en ti
 
 ## Version 3: con clases y objetos
 
-## Version 3: con clases y objetos
 
 Estructuré la solución aplicando Programación Orientada a Objetos para separar la lógica de negocio y los datos de la representación en el DOM.
 
@@ -32,7 +31,6 @@ Estructuré la solución aplicando Programación Orientada a Objetos para separa
 
 ## Donde uso DOM, eventos y objetos
 
-## Donde uso DOM, eventos y objetos
 
 | Pieza  | Linea de tu codigo donde aparece                  | Para que sirve                                                                     |
 | ------ | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -42,7 +40,6 @@ Estructuré la solución aplicando Programación Orientada a Objetos para separa
 
 ## Pruebas realizadas
 
-## Pruebas realizadas
 
 | Accion                             | Resultado esperado                     | Resultado obtenido                             | Cumple (Si/No) |
 | ---------------------------------- | -------------------------------------- | ---------------------------------------------- | -------------- |
@@ -51,8 +48,6 @@ Estructuré la solución aplicando Programación Orientada a Objetos para separa
 | Hacer clic en el texto de la tarea | Tacha el texto y cambia su estado      | El texto se tacha y cambia a color gris        | Sí             |
 | Hacer clic en "Eliminar"           | Remueve la tarea del DOM y de la lista | La tarea desaparece completamente              | Sí             |
 | Escribir en el buscador "Estudiar" | Filtra las tareas en tiempo real       | Muestra solo los elementos coincidentes        | Sí             |
-
-## Por que me diseño asi mi clase
 
 ## Por que me diseño asi mi clase
 
